@@ -1,10 +1,18 @@
-import p5 from "p5";
+import p5 from 'p5';
 
-const p = new p5((sketch) => {
-    sketch.setup = setup;
+const p = new p5((sketch: p5) => {
+  sketch.setup = setup;
+  sketch.draw = draw;
+  sketch.keyPressed = keyPressed;
 });
 
 function setup() {
-    p.createCanvas(400, 400);
-    p.background("red");
+  p.createCanvas(800, 400);
+}
+
+function draw() {
+  p.background('white');
+}
+
+function keyPressed() {
 }
