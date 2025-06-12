@@ -1,68 +1,105 @@
-# Sorter Exam Specification
+# Vite + p5.js + TypeScript Template
 
-## Introduction
+This is a starter template for creative coding with [p5.js](https://p5js.org/) using [TypeScript](https://www.typescriptlang.org/) and [Vite](https://vitejs.dev/) as the build tool. Perfect for beginners looking to get started with creative coding in a modern development environment.
 
-In this exam, you will demonstrate your understanding of the **Bubble Sort** algorithm by implementing and visualizing it in code. You are expected to display both the unsorted (randomized) and sorted states of an array using a bar chart.
+## 📁 Project Structure
 
-## Coding Tasks
+```
+vitep5/
+├── assets/           # Static assets like images, fonts, and other media
+├── node_modules/     # Dependencies (generated after npm install)
+├── src/              # Source code for your creative projects
+│   └── index.ts      # Entry point for your p5.js sketch
+├── .gitignore        # Files to ignore in version control
+├── index.html        # HTML entry point
+├── package.json      # Project configuration and dependencies
+├── package-lock.json # Dependency lock file (auto-generated)
+├── tsconfig.json     # TypeScript configuration
+└── README.md         # This file
+```
 
-### Minimum Requirements
+## 🔍 Key Files Explained
 
-Your implementation **must** fulfill the following:
+### `index.html`
+The main HTML file that loads your p5.js sketch. You typically don't need to modify this unless you want to:
+- Add CSS styles
+- Include additional scripts
+- Change the page title or meta information
+- Reference static assets (images, fonts, etc.)
 
-1. **Global Array Declaration**
+### `assets/` folder
+This directory contains static files used in your project:
+- Images (PNG, JPG, SVG, GIF, etc.)
+- Fonts (TTF, OTF, WOFF, etc.)
+- Audio files (MP3, WAV, etc.)
+- Other media or data files (JSON, CSV, etc.)
 
-   * Declare an array (preferably as a global variable) to hold a sequence of numbers.
+### `src/index.ts`
+This is where you write your p5.js code using TypeScript. This is your main sketch file where you'll implement:
+- `setup()` function (runs once at the beginning)
+- `draw()` function (runs continuously)
+- Any other p5.js functions or custom code
 
-2. **Array Initialization**
+### `package.json`
+Contains project metadata and defines the available scripts:
+- Lists project dependencies
+- Configures build scripts
+- Sets project name, version, and other metadata
 
-   * On program startup, fill the array with consecutive numbers starting at 1 up to an upper limit (e.g., 30).
-   * The upper limit should be **easily adjustable** (e.g., by changing a constant).
-   * The array values must be in a **random order** (shuffled).
+### `tsconfig.json`
+TypeScript configuration that:
+- Sets compilation options
+- Defines TypeScript rules
+- Configures type checking behavior
 
-3. **Bar Chart Visualization**
+## 🚀 Available Scripts
 
-   * Draw a bar chart representing the numbers in the array.
-   * The order of the bars in the chart must correspond to the order of numbers in the array (i.e., if the array is `[5, 1, 8]`, the bar chart shows bars for 5, 1, and 8 in that order).
-   * Example (**numbers above bars not required at this stage**):
+The following scripts are available in this project:
 
-     ![Shuffled bar chart](./shuffled.png)
+### `npm start`
+```bash
+npm start
+```
+Starts the development server with hot reload. This means:
+- Your project will be available at http://localhost:5173 (or another port if 5173 is in use)
+- Changes to your code will automatically update in the browser
+- Use this during development for quick feedback
 
-4. **Sorting on Key Press**
+### `npm run build`
+```bash
+npm run build
+```
+Creates an optimized production build of your project:
+- Output goes to the `dist` folder
+- Minifies code and optimizes assets for deployment
+- Run this when you're ready to deploy your project
 
-   * When the **space bar** is pressed:
+### `npm run preview`
+```bash
+npm run preview
+```
+Serves the production build locally for testing:
+- Lets you preview how your built project will look when deployed
+- Useful for final checks before deployment
 
-     * Apply the Bubble Sort algorithm to sort the array **in ascending order**.
-     * You **must implement Bubble Sort yourself**—do not use built-in or library sort functions.
-     * After sorting, **update the bar chart** to reflect the sorted array.
+## 🎨 Getting Started
 
-     Example:
+1. **First-time setup**:
+   ```bash
+   # Install dependencies
+   npm install
+   ```
 
-     ![Sorted bar chart](./sorted.png)
+2. **Start coding**:
+   - Open `src/index.ts` and begin writing your p5.js sketch
+   - Run `npm start` to see your changes in real-time
 
-### Advanced Requirements
+## 📦 Deployment
 
-To earn full points, **additionally implement** the following features:
+After running `npm run build`, deploy the contents of the `dist` folder to any static website host such as:
+- GitHub Pages
+- Netlify
+- Vercel
+- Firebase Hosting
 
-1. **Function Extraction**
-
-   * Place your Bubble Sort code in a **separate function** (not directly inside event handlers or the main logic).
-
-2. **Number Labels**
-
-   * Draw the value of each number **above its respective bar**, as shown in the images above.
-
-3. **Repeated Sorting & Shuffling**
-
-   * After the array is sorted:
-
-     * If the user presses the space bar again, re-randomize (shuffle) the array.
-     * This allows users to **alternate between sorting and shuffling** by repeatedly pressing the space bar.
-
-## Quality Criteria
-
-Your code should adhere to these standards:
-
-* **Avoid “magic numbers”**: Use named constants for important values (e.g., array size, bar width).
-* **Minimize global variables**: Keep variables with limited scope local to functions when possible.
-* **No code duplication**: Factor out repeated logic into reusable functions.
+Happy creative coding! 🎉
