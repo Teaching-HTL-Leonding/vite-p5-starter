@@ -11,10 +11,12 @@ vitep5/
 ├── src/              # Source code for your creative projects
 │   └── index.ts      # Entry point for your p5.js sketch
 ├── .gitignore        # Files to ignore in version control
+├── biome.json        # Biome linter/formatter configuration
 ├── index.html        # HTML entry point
 ├── package.json      # Project configuration and dependencies
 ├── package-lock.json # Dependency lock file (auto-generated)
 ├── tsconfig.json     # TypeScript configuration
+├── vite.config.ts    # Vite build configuration
 └── README.md         # This file
 ```
 
@@ -82,6 +84,12 @@ Serves the production build locally for testing:
 - Lets you preview how your built project will look when deployed
 - Useful for final checks before deployment
 
+### `npm run check`
+```bash
+npm run check
+```
+Runs [Biome](https://biomejs.dev/) to lint, format, and sort imports in one pass, writing fixes back to your files. Use this before committing to keep code style consistent.
+
 ## 🎨 Getting Started
 
 1. **First-time setup**:
@@ -93,6 +101,8 @@ Serves the production build locally for testing:
 2. **Start coding**:
    - Open `src/index.ts` and begin writing your p5.js sketch
    - Run `npm start` to see your changes in real-time
+
+**Important Note:** In contrast to previous exercises in the TypeScript web playground, you **must prefix p5.js functions with `p.`** when using this template. For example: `createCanvas(800, 400);` becomes `p.createCanvas(800, 400);`.
 
 ## 📦 Deployment
 

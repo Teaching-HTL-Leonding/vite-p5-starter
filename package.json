@@ -1,23 +1,25 @@
 {
-  "name": "vitep5",
-  "version": "1.0.0",
-  "main": "index.js",
-  "type": "module",
-  "scripts": {
-    "start": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "MIT",
-  "description": "Starter Code for p5 + Vite + TypeScript",
-  "devDependencies": {
-    "@types/p5": "^1.7.6",
-    "typescript": "^5.8.3",
-    "vite": "^6.2.5"
-  },
-  "dependencies": {
-    "p5": "^2.0.3"
-  }
+	"name": "vitep5",
+	"version": "1.0.0",
+	"main": "index.js",
+	"type": "module",
+	"scripts": {
+		"start": "vite",
+		"build": "tsc && vite build",
+		"preview": "vite preview",
+		"check": "biome check --write ."
+	},
+	"keywords": [],
+	"author": "",
+	"license": "MIT",
+	"description": "Starter Code for p5 + Vite + TypeScript",
+	"devDependencies": {
+		"@biomejs/biome": "2.4.13",
+		"@types/p5": "^1.7.6",
+		"typescript": "^6.0.3",
+		"vite": "^8.0.10"
+	},
+	"dependencies": {
+		"p5": "^2.0.3"
+	}
 }
